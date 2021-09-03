@@ -17,12 +17,14 @@ const Hello = (props) => {
 const Counter = (props) => {
   const [counter, setCounter] = useState(0)
   const increaseByOne = () => setCounter(counter + 1)
+  const decreaseByOne = () => setCounter(counter - 1)
   const setToZero = () => setCounter(0)
 
   return (
     <div>
       <div>Count: {counter}</div>
       <button onClick={increaseByOne}>Add Count</button>
+      <button onClick={decreaseByOne}>Subtract Count</button>
       <button onClick={setToZero}>Reset Count</button>
     </div>
   )
